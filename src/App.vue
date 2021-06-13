@@ -1,6 +1,7 @@
 <template>
   <div>
-    <h1>{{name}}</h1>
+    <div v-html="hack"></div>
+    <div v-html="name"></div>
     <div v-text="channel"></div>
   </div>
 </template>
@@ -11,8 +12,9 @@
     name: 'App',
    data() {
      return {
-       name: "Joseph",
-       channel: "Youtube"
+       name: "<i>Joseph</i>",
+       channel: "Youtube",
+       hack: `<a href="#" onclick="alert('you have been hacked')"> win a prize </a>`
      }
    }
   }
