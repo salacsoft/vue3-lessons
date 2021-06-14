@@ -3,6 +3,9 @@
     <h1>{{name}}</h1>
     <div v-text="channel"></div>
     <h2 v-bind:id="headingId">Heads</h2>
+    <h2 className="underline">Underline</h2>
+    <h2 class="underline" v-bind:class="txtColor">Color</h2>
+    <h3 v-bind:Class="isPromoted && 'promoted' ">Promoted Movie</h3>
   </div>
 </template>
 
@@ -14,7 +17,9 @@
      return {
        name: "Joseph",
        channel: "Youtube",
-       headingId: "heading"
+       headingId: "heading",
+       txtColor: "green",
+       isPromoted: true
      }
    }
   }
@@ -28,5 +33,16 @@
     text-align: center;
     color: #2c3e50;
     margin-top: 60px;
+  }
+  .underline {
+    text-decoration: underline;
+  }
+
+  .green {
+    color: green;
+  }
+
+  .promoted {
+    font-style: italic;
   }
 </style>
