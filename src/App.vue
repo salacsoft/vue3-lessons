@@ -2,6 +2,7 @@
   <div>
     <h1>{{name}}</h1>
     <div v-text="channel"></div>
+    <h2 v-bind:id="headingId">Heads</h2>
   </div>
 </template>
 
@@ -12,7 +13,8 @@
    data() {
      return {
        name: "Joseph",
-       channel: "Youtube"
+       channel: "Youtube",
+       headingId: "heading"
      }
    }
   }
